@@ -1,0 +1,10 @@
+# Determine the winner
+score_dict = {i: num_cards_per_player - hands[i].count('\n') for i in range(num_players)}
+min_score = min(score_dict.values())
+winners = [i+1 for i, score in score_dict.items() if score == min_score]
+
+# Print the winner(s)
+if len(winners) == 1:
+    print(f"Player {winners[0]} wins with {min_score} pairs!")
+    with open('game_results.txt', 'a') as f:
+     f.write(f"Player {winners[0]} wins with {min_score} pairs!\n")
