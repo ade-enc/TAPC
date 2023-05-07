@@ -21,3 +21,5 @@ while len(cards) > 0:
     if len(cards) == 0:
             break
     rounds += 1           
+    #Must define features
+    #
