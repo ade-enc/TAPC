@@ -30,7 +30,7 @@ while not hands_have_pair:
     random.shuffle(cards)
     hands = ['\n'.join(cards[i:i+num_cards_per_player]) for i in range(0, len(cards), num_cards_per_player)]
     for hand in hands:
-        for card in cards:
+        for card in hand.split('\n'):
             if hand.count(card) == 2:
                 hands_have_pair = True
                 break
